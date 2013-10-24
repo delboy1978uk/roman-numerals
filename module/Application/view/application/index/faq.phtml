@@ -1,0 +1,51 @@
+<div id="faq" class="well">
+    <div class="span8">
+        <h1>Examining the Spec Sheet</h1>
+        <p>Upon reading the 'Coding Kata' Spec Sheet I summarised the following points:</p>
+        <ul>
+            <li>All my code should be publicly available</li>
+            <li>A thorough explanation of my train of thought is needed (hence this FAQ)</li>
+            <li>I must show a solid understanding of OO PHP</li>
+            <li>I must create tests before I code</li>
+            <li>I must complete both extensions to stand out (so a Website and JSON service then)</li>
+        </ul>
+        <hr />
+        <h1>Course of Action</h1>
+        <p>I decided based on the above, that:</p>
+        <ul>
+            <li>I would upload the site to hosting on Fortrabbit.com (It uses CI techniques like git hooks for push to deploy)</li>
+            <li>I would utilise Zend Framework 2, to showcase my skills with PHP frameworks and OO.</li>
+            <li>I decided to use Behat for Behaviour Driven Development</li>
+            <li>I would use jQuery to send AJAX calls to a JSON service</li>
+        </ul>
+        <hr />
+        <h1>Methodology</h1>
+        <p>Using composer, I installed Zend Framework 2 and Behat for Behavioural tests.<br />
+            Once everything was configured, I wrote some simple Cucumber/Gherkin Feature files, and generated the relevant FeatureContext methods.<br />
+            I created the interface and the roman numeral class, then headed to wikipedia to remind me how to write roman numerals beyond those on my watch!<br />
+            I created a landing page using some bootstrap classes, and jazzed it up a little with some CSS3, which I wrote using LESS.<br />
+            I ran the tests, and worked towards passing all tests.<br />
+            I used jQuery to do an AJAX call and retrieve the data.
+        </p>
+        <hr />
+        <h1>Results</h1>
+        <p>If I had put more time and effort into creating this sample site, I would have liked to have made (at the least) the following improvements</p>
+        <ul>
+            <li>Custom Exception classes</li>
+            <li>jQuery client side validation of data</li>
+            <li>\Zend\Form for server side validation of data.</li>
+            <li>Using something like Selenium for bringing Javascript into the testing.</li>
+            <li>More behavioural tests.</li>
+        </ul>
+        <hr />
+        <h1>Show me the code!</h1>
+        <p>Sure, head on over to my <a href="http://github.com/delboy1978uk/roman-numerals">Github</a> page! Feel free to have a nose in to my other things there too (I've been playing with making playing card classes last week, good fun!)</p>
+        <p class="lead">Files of Interest</p>
+        <ul>
+            <li>Behavioural Tests are located in the tests directory</li>
+            <li>Roman numeral class files are in module/RomanNumerals/src/RomanNumerals</li>
+            <li>HTML files (.phtml to be precise) are in module/Application/view</li>
+            <li>CSS is located in public/css/style.less</li>
+        </ul>
+    </div>
+</div>

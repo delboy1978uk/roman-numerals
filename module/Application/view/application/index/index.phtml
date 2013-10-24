@@ -1,0 +1,88 @@
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Roman Numeral<br />Converter</h1><br />
+            <input id="number" type="text" class="input-lg" placeholder="Enter a number to convert..." />
+            <a id="submit" class="btn btn-lg btn-success" >Convert</a><br />
+            <h2 id="message"></h2>
+        </div>
+        <div class="col-md-5">
+            <div id="monty"></div>
+            <p class="text-center"><small>&lsquo;What did the Romans ever do for us?&rsquo;</small></p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Made using:</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Composer</li>
+                    <li>Behat / Mink</li>
+                    <li>Zend Framework 2</li>
+                    <li>Bootstrap 3</li>
+                    <li>jQuery</li>
+                    <li>Less</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Try the API</h3>
+            </div>
+            <div class="panel-body">
+                <p>Access our JSON API!</p>
+                <p>Browse to<br /><a href="http://bbc/roman-numerals?convert=1234">http://bbc/roman-numerals?convert=1234</a><br />
+                replacing 1234 with the value you wish to convert.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Hire Me!</h3>
+            </div>
+            <div class="panel-body">
+                <p>Once you've had a nosey through the actual code, you should be pretty much convinced (I am hoping) that I am up to the job. But better yet, I love doing this!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#submit').click(function(){
+            var val = $('#number').val();
+            $.get('/roman-numerals',{convert: val},function(event){
+                console.log(event);
+                if(event.success == false)
+                {
+                   $('#message').html(event.message);
+                }
+                else
+                {
+                    if(event.roman)
+                    {
+                        var val = event.integer;
+                    }
+                    else
+                    {
+                        var val = event.numerals;
+                    }
+                    $('#message').html(val);
+                }
+            });
+        });
+    });
+</script>

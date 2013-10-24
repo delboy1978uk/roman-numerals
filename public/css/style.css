@@ -1,0 +1,52 @@
+html body {
+  background-image: url('/img/rome.jpg');
+  background-size: 100%;
+}
+html body a.navbar-brand {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+html body div.jumbotron {
+  margin-top: 70px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+html body div.jumbotron h1 {
+  margin-top: 0px;
+}
+html body div.jumbotron input {
+  min-width: 400px;
+}
+html body div.jumbotron a.btn {
+  margin-top: -5px;
+}
+html body nav.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: none;
+}
+html body div#monty {
+  background-image: url('/img/monty.jpg');
+  background-position: 0px -4px;
+  border-radius: 5px;
+  width: 320px;
+  height: 170px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+}
+html body footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: auto;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+html body footer p {
+  margin: 0px;
+}
+html body div#faq {
+  margin-top: 70px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
